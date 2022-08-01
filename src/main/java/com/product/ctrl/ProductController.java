@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -74,6 +75,16 @@ public class ProductController {
 	public void deletProductsBySellerId(@PathVariable("seller_id") Long sellerId){
 		
 		sellerService.deleteProductById(sellerId);
+	}
+	
+	@PutMapping(value = "update_product/{seller_id}")
+	public int updateProductBySellerId(@RequestBody Product product, @PathVariable Long sellerId ) {
+		
+		String category = product.getProductCategory();
+		String type = product.getProductType();
+		String name = product.getProductName();
+		
+		return sellerService.updateProduct(category, type, name, sellerId);
 	}
 	
 }
