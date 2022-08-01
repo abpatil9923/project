@@ -1,17 +1,20 @@
-# project
+### project
 
 
-##swagger url
+### #swagger url
 
 http://localhost:8089/swagger-ui.html#/product-controller
 
 
-#Add Seller Info and Product
+###Add Seller Info and Product
 http://localhost:8089/add_product
 
-#Seller 1
+### #Seller 1
+
 {
+
     "sellerName" : "Atul",
+	
     "sellerMobile" : "98881580895",
     "products" :[
         {
@@ -28,7 +31,6 @@ http://localhost:8089/add_product
             "productType" : "Washing machine",
             "productCategory" : "Electronics",
             "productPriceRange" : {
-
                 "minPrice" : "22000",
                 "maxPrice" : "25000"
             } 
@@ -37,8 +39,9 @@ http://localhost:8089/add_product
 }
 
 
-#Seller 2
+###Seller 2
 {
+
     "sellerName" : "Rahul",
     "sellerMobile" : "7658158089",
     "products" :[
@@ -64,9 +67,10 @@ http://localhost:8089/add_product
     ]
 }
 
-#Seller 3
+###Seller 3
 
-{
+`{
+
     "sellerName" : "Rahul",
     "sellerMobile" : "7658158089",
     "products" :[
@@ -90,32 +94,32 @@ http://localhost:8089/add_product
             } 
         }   
     ]
-}
+}`
 
 
-#Get All the products
+###Get All the products
 http://localhost:8089/products
 
 
 
-#Get specific products based on product type
+###Get specific products based on product type
 http://localhost:8089/product_type/{product-type}
 
 
 
-#Get specific products based on product category
+###Get specific products based on product category
 http://localhost:8089/product_category/{product-category}
 
 
 
-#Get specific products based on product name
+###Get specific products based on product name
 http://localhost:8089/product_name/{product-name}
 
 
 
-#Get products of particular seller
+###Get products of particular seller
 http://localhost:8089/products_by_sellerid/{seller-id}
 
 
-#Delete Product
+###Delete Product
 http://localhost:8089/delete_by_sellerid/{seller-id}
